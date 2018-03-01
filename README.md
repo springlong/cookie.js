@@ -7,12 +7,10 @@
 在原生的JavaScript语句中，我们可以通过下面的两个属性获取cookie的相关内容：
 
 1. `navigator.cookieEnabled`
-<br>
 <br>该属性返回当前浏览器是否支持cookie操作。（返回类型：Boolean）
 <br>目前而言几乎绝大多数浏览器都支持cookie，只有那些有特殊需求的用户才会去禁用浏览器的cookie。如果相关应用需要使用到cookie功能，请务必确保浏览器是否支持cookie操作，否则应不给于处理。
 
 2. `document.cookie`
-<br>
 <br>该属性是浏览器提供给开发人员管理当前域下的所有cookie的唯一途径（该属性可读写）。
 <br>对该属性进行读操作，可以获取已有的所有cookie所组成的字符串内容。
 <br>对该属性进行写操作，则可以添加cookie或者对cookie进行重新赋值。
@@ -118,7 +116,7 @@ cookie('age', null, {path: '/news'});
 
 该选项用来指定可访问cookie的主机名，默认为当前访问域名。
 
-默认情况下，二级域名之间创建的cookie是不能相互被访问的。比如www.fedlife.cn访问不了demo.fedlife.cn域名下创建的cookie。如果需要实现二级域名之间能够互相被访问，则需要设置domain属性值为`.fedlife.cn`，这样才能保证images.fedlife.cn、static.fedlife.cn、www.fedlife.cn等域名下的网页也能够正常访问demo.fedlife.cn域名下的网页所创建的cookie。
+默认情况下，二级域名之间创建的cookie是不能相互被访问的。比如www.fedlife.cn访问不了demo.fedlife.cn域名下创建的cookie。如果需要实现二级域名之间能够互相被访问，则需要设置domain属性值为`.fedlife.cn`，这样才能保证`images.fedlife.cn`、`static.fedlife.cn`、`www.fedlife.cn`等域名下的网页也能够正常访问demo.fedlife.cn域名下的网页所创建的cookie。
 
 当在demo.fedlife.cn下创建一个cookie时，如果将该cookie的domain值指定为其他二级域名，那么该cookie将创建失败。如果将该cookie的domain值指定为`.fedlife.cn`，那么必须指定`{domain: '.fedlife.cn'}`才能移除该cookie。
 
