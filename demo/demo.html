@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>cookie处理</title>
+    <script src="../src/cookie.js"></script>
+</head>
+<body>
+<script>
+    // 设置cookie
+    cookie('name', 'Jerry Sun');
+    cookie('sex', 'male');
+
+    // 获取cookie
+    console.log(cookie('name'));  // 'Jerry Sun'
+    console.log(cookie('sex'));  // 'male'
+    console.log(cookie('age'));  // null
+
+    // 移除cookie
+    cookie('name', null);
+
+    //cookie过期时间的设置
+    cookie('test1', 'Spring Long', {expires: 1, unit: 'day'});
+    cookie('test2', 'Spring Long', {expires: 1, unit: 'hour'});
+    cookie('test3', 'Spring Long', {expires: 1, unit: 'minute'});
+    cookie('test4', 'Spring Long', {expires: 10, unit: 'second'});
+
+    // 设置cookie目录
+    cookie('dir1', 1, {path: '/cookie'});
+    cookie('dir2', 12, {path: '/demo'});
+</script>
+</body>
+</html>
