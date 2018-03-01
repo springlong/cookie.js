@@ -1,6 +1,6 @@
 # cookie.js
 
-提供cookie函数方面cookie的相关操作！
+方便管理浏览器cookie！
 
 ## 背景分析
 
