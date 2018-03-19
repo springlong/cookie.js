@@ -30,7 +30,7 @@ var str = document.cookie; //=> 'name=Jerry Sun; sex=male'
 
 原生操作并不能满足快速创建、编辑、移除某个cookie的需求，因此我们围绕这三点对cookie操作进行了补充完善，从而构成了现在你所看到的cookie函数。希望它能够帮助你快速编辑cookie。
 
-## 使用插件：*cookie(name, [value, [options]])*
+## 使用*cookie(name, [value, [options]])*
 
 ### 创建/编辑cookie
 
